@@ -24,8 +24,6 @@ trait CRM_HRCore_Upgrader_Steps_1010 {
       'keys' => [$key]
     ]);
 
-    civicrm_api3('Extension', 'refresh');
-
     return TRUE;
   }
 }
