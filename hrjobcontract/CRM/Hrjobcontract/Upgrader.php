@@ -95,16 +95,6 @@ class CRM_Hrjobcontract_Upgrader extends CRM_Hrjobcontract_Upgrader_Base {
       $this->executeCustomDataFile('xml/1105_pension_type.xml');
     }
 
-    $i = 4;
-    $params = array(
-      'option_group_id' => 'hrjc_contract_type',
-      'name' => 'Employee_Permanent',
-      'weight' => $i,
-      'label' => 'Employee - Permanent',
-      'value' => 'Employee - Permanent',
-    );
-    civicrm_api3('OptionValue', 'create',$params);
-
     $optionGroupID = CRM_Core_DAO::getFieldValue('CRM_Core_DAO_OptionGroup', 'hrjc_contract_type', 'id', 'name');
     foreach (array('Intern','Trustee','Volunteer') as $opName) {
       $i++;
