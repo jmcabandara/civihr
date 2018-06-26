@@ -54,6 +54,6 @@ set +ex
 
 if [ "$WITH_HR_SAMPLE" == "1" ]; then
   set -ex
-  drush "$@" cvapi extension.install keys=uk.co.compucorp.civicrm.hrsampledata
+  drush "$@" cvapi extension.install keys=uk.co.compucorp.civicrm.hrsampledata debug=1
   set +ex
 fi
